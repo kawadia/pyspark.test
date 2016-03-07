@@ -2,7 +2,6 @@
 from __future__ import print_function
 
 import sys
-from operator import add
 
 from pyspark import SparkContext
 from pyspark import HiveContext
