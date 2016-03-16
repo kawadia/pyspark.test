@@ -28,6 +28,9 @@ def collect_helper(ssc, dstream, expected_length, block=True):
     """
     Collect each RDDs into the returned list.
 
+    This function is borrowed and modified from here:
+    https://github.com/holdenk/spark-testing-base
+    
     :return: list with the collected items.
     """
     result = []
