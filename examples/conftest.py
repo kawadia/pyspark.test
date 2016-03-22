@@ -28,9 +28,9 @@ def spark_context(request):
 
     """
     conf = (SparkConf().setMaster("local[2]").setAppName("pytest-pyspark-local-testing"))
+    sc = SparkContext(conf=conf)
     request.addfinalizer(lambda: sc.stop())
 
-    sc = SparkContext(conf=conf)
     quiet_py4j()
     return sc
 
